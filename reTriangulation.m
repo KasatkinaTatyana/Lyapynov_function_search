@@ -10,12 +10,13 @@ for i=1:trCnt
     x3 = 0.75 * T_old(i,6);
     y3 = 0.75 * T_old(i,7);
     
-    x1 = T_old(i,2);
-    y1 = T_old(i,3);
-    x2 = T_old(i,4);
-    y2 = T_old(i,5);
-    x3 = T_old(i,6);
-    y3 = T_old(i,7);
+% debug    
+%     x1 = T_old(i,2);
+%     y1 = T_old(i,3);
+%     x2 = T_old(i,4);
+%     y2 = T_old(i,5);
+%     x3 = T_old(i,6);
+%     y3 = T_old(i,7);
     
     % если одна из вершин - точка (0; 0)
     if ((abs(x1) < 1e-10) && (abs(y1) < 1e-10))

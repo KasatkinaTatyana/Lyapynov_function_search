@@ -15,10 +15,10 @@ boundCond = [0 0 0 0];
 
 % границы области
 global xL xR yL yR
-xL = -2.1;
-xR = 2.1;
-yL = -2.1;
-yR = 2.1;
+xL = -1.1;
+xR = 1.1;
+yL = -1.1;
+yR = 1.1;
 global trCnt
 trCnt = 0;
 
@@ -111,35 +111,25 @@ if exitflag
         y2 = T1(i,5);
         y3 = T1(i,7);
         
-        [minVal, ind_1] = min( (vertexAr(:,1) - x1).^2 + ...
-                               (vertexAr(:,2) - y1).^2 );
-        [minVal, ind_2] = min( (vertexAr(:,1) - x2).^2 + ...
-                               (vertexAr(:,2) - y2).^2 );
-        [minVal, ind_3] = min( (vertexAr(:,1) - x3).^2 + ...
-                               (vertexAr(:,2) - y3).^2 );
-                           
-        z1 = L_fAr(ind_1);
-        z2 = L_fAr(ind_2);
-        z3 = L_fAr(ind_3);
-                           
-        line([x1 x2], [y1 y2], [z1 z2]);
-        line([x1 x3], [y1 y3], [z1 z3]);
-        line([x2 x3], [y2 y3], [z2 z3]);
+        z1 = 
+        line([x1 x2], [y1 y2]);
+        line([x1 x3], [y1 y3]);
+        line([x2 x3], [y2 y3]);
         
     end
     
-%     for i=1 : length(L_fAr(:,1))
-%     % for i=1 : 40
-%         x1 = L_fAr(i,4);
-%         x2 = L_fAr(i,6);
-%         x3 = L_fAr(i,8);
-%         
-%         y1 = L_fAr(i,5);
-%         y2 = L_fAr(i,7);
-%         y3 = L_fAr(i,9);
-%         
-%         line([x1 x2], [y1 y2], [L_fAr(i,1) L_fAr(i,2)]);
-%         line([x1 x3], [y1 y3], [L_fAr(i,1) L_fAr(i,3)]);
-%         line([x2 x3], [y2 y3], [L_fAr(i,2) L_fAr(i,3)]);
-%     end
+    for i=1 : length(L_fAr(:,1))
+    % for i=1 : 40
+        x1 = L_fAr(i,4);
+        x2 = L_fAr(i,6);
+        x3 = L_fAr(i,8);
+        
+        y1 = L_fAr(i,5);
+        y2 = L_fAr(i,7);
+        y3 = L_fAr(i,9);
+        
+        line([x1 x2], [y1 y2], [L_fAr(i,1) L_fAr(i,2)]);
+        line([x1 x3], [y1 y3], [L_fAr(i,1) L_fAr(i,3)]);
+        line([x2 x3], [y2 y3], [L_fAr(i,2) L_fAr(i,3)]);
+    end
 end

@@ -1,0 +1,8 @@
+function F = assignVertexAr(T)
+size = length(T(:,1));
+
+for i=1:size
+    
+end
+
+end
