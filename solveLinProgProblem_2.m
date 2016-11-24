@@ -58,6 +58,9 @@ for i=1:trCount
     delta = x1(1)*x2(2) - x1(2)*x2(1) - (x0(1)*x2(2) - x2(1)*x0(2)) + ...
             x0(1)*x1(2) - x1(1)*x0(2);
  
+    % V(x) = w * x + a    
+    % grad V(x) = w = (w1, w2)    
+    % w1 = k1_1*Vx0 + k2_1*Vx1 + k3_1*Vx2    
     k1_1 = (x1(2) - x2(2)) / delta;
     k2_1 = -(x0(2) - x2(2)) / delta;
     k3_1 = (x0(2) - x1(2)) / delta;

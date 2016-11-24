@@ -15,10 +15,10 @@ boundCond = [0 0 0 0];
 
 % границы области
 global xL xR yL yR
-xL = -2.1;
-xR = 2.1;
-yL = -2.1;
-yR = 2.1;
+xL = -3.1;
+xR = 3.1;
+yL = -3.1;
+yR = 3.1;
 global trCnt
 trCnt = 0;
 
@@ -94,6 +94,7 @@ if (length(T1(:,1)) > 0)
 end
 
 [exitflag, L_fAr] = solveLinProgProblem_2(T1);
+% нумерация вершин в L_fAr совпадает с нумерацией вершин в vertexAr
 
 % визуализация
 if exitflag
@@ -127,6 +128,7 @@ if exitflag
         line([x2 x3], [y2 y3], [z2 z3]);
         
     end
+
     
 %     for i=1 : length(L_fAr(:,1))
 %     % for i=1 : 40
@@ -143,3 +145,5 @@ if exitflag
 %         line([x2 x3], [y2 y3], [L_fAr(i,2) L_fAr(i,3)]);
 %     end
 end
+
+derSysAr = verificate(T1, L_fAr);
